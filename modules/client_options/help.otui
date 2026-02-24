@@ -1,0 +1,18 @@
+OptionPanel
+  ComboBox
+    id: categoryComboBox
+    menu-scroll: true
+    menu-height: 125
+    menu-scroll-step: 25
+    text-offset: 5 2
+    @onOptionChange: modules.client_options.onHelpChange(self:getId(), self.currentIndex)
+
+  Panel
+    id: helpDescription
+    height: 326
+    margin-top: 5
+    text-align: left
+    text-wrap: true
+    
+  HorizontalSeparator
+    margin-top: 5

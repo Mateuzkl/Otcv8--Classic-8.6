@@ -1,0 +1,22 @@
+lootItems = {
+	["thunderstorm rune"] = 120,
+	["avalanche rune"] = 75,
+	["great fireball rune"] = 75,
+	["fire wall rune"] = 60,
+	["fire field rune"] = 25,
+	["fire bomb rune"] = 115,
+	["explosion rune"] = 60,
+	["energy wall rune"] = 85,
+	["energy field rune"] = 38,
+	["destroy field rune"] = 15,
+	["convice creature rune"] = 80,
+	["blank rune"] = 10,
+	["antidote rune"] = 65,
+	["ultimate spirit potion"] = 425,
+	["great spirit potion"] = 325,
+	["ultimate mana potion"] = 375,
+	["great mana potion"] = 250,
+	["strong mana potion"] = 150,
+	["mana potion"] = 100,
+	manafluid = 85
+}

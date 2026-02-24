@@ -1,0 +1,12 @@
+Module
+  name: game_huntanalyzer
+  description: Hunt Analyzer
+  author: Klank
+  website: www.otclient.info
+  sandboxed: true
+  scripts: [ huntanalyzer ]
+  autoload: true
+  @onLoad: init()
+  @onUnload: terminate()
+  dependencies:
+    - game_interface

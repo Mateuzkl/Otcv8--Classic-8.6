@@ -1,0 +1,34 @@
+UIWindow
+  id: devWindow
+  anchors.right: parent.right
+  anchors.bottom: parent.bottom
+  size: 200 100
+  background-color: #000000
+
+  Label
+    !text: tr('Developer Tools')
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    text-align: center
+    border: 1 #ffffff33
+    height: 20
+
+  Panel
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    border: 1 #ffffff33
+    padding: 5
+    padding-top: 10
+
+    CheckBox
+      id: localHost
+      anchors.top: parent.top
+      anchors.left: parent.left
+      anchors.right: parent.right
+      height: 20
+      !text: tr('Localhost login')
+      text-align: topLeft
+      @onCheckChange: modules.client_devtools.onLocalhostCheckChange(self:isChecked())

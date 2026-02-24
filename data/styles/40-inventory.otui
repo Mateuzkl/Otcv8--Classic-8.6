@@ -1,0 +1,21 @@
+CombatBox < UICheckBox
+  size: 20 20
+  image-clip: 0 0 20 20
+
+
+  $checked:
+    image-clip: 0 20 20 20
+
+FightOffensiveBox < CombatBox
+  image-source: /images/game/combatmodes/fightoffensive
+FightBalancedBox < CombatBox
+  image-source: /images/game/combatmodes/fightbalanced
+FightDefensiveBox < CombatBox
+  image-source: /images/game/combatmodes/fightdefensive
+ChaseModeBox < CombatBox
+  image-source: /images/game/combatmodes/chasemode
+SafeFightBox < CombatBox
+  image-source: /images/game/combatmodes/safefight
+
+MountButton < CombatBox
+  image-source: /images/game/combatmodes/mount    

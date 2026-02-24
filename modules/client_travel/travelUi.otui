@@ -1,0 +1,118 @@
+TravelChoiceList < TextList
+  id: choiceList
+  vertical-scrollbar: choiceScrollBar
+  anchors.fill: prev
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.top: prev.bottom
+  anchors.bottom: parent.bottom
+  margin-top: 8
+  margin-bottom: 25
+  focusable: false
+  visible: true
+
+TravelChoiceScrollBar < VerticalScrollBar
+  id: choiceScrollBar
+  anchors.top: choiceList.top
+  anchors.bottom: choiceList.bottom
+  anchors.right: choiceList.right
+  step: 14
+  pixels-scroll: true
+  visible: true
+
+TravelChoiceListLabel < Label
+  font: verdana-11px-monochrome
+  background-color: alpha
+  text-offset: 2 0
+  focusable: true
+  $focus:
+    background-color: #00000055
+    color: #ffffff
+
+MainWindow
+  id: mainTravelWindow
+  !text: tr('Travel window')
+  size: 550 460
+
+  $mobile:
+    size: 550 360
+
+  FlatPanel
+    id: mapPanel
+    height: 250
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: parent.top
+    margin-top: 5
+
+    $mobile:
+      height: 150
+
+    Minimap
+      id: travelMap
+      anchors.fill: parent
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.top
+      anchors.bottom: parent.bottom
+
+  TabButton
+    id: allTab
+    !tooltip: tr("All locations")
+    !text: tr('All locations')
+    checked: true
+    on: true
+    anchors.left: parent.left
+    anchors.top: prev.bottom
+    width: 128
+    margin-top: 6
+
+
+  TabButton
+    id: shrineTab
+    !tooltip: tr("Shrines")
+    !text: tr('Shrines')
+    anchors.left: allTab.right
+    anchors.top: prev.top
+    width: 128
+
+  TabButton
+    id: spawnTab
+    !tooltip: tr("Spawns")
+    !text: tr('Spawns')
+    anchors.left: prev.right
+    anchors.top: prev.top
+    width: 128
+
+  TextEdit
+    id: searchText
+    placeholder: Search
+    anchors.verticalCenter: prev.verticalCenter
+    anchors.left: prev.right
+    anchors.right: parent.right
+    margin-left: 6
+    @onTextChange: onSearchTextChange()
+
+
+  TravelChoiceList
+  TravelChoiceScrollBar
+
+  Button
+    !text: tr('Close')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: modules.client_travel.closeTravelWindow()
+
+
+  Button
+    !text: tr('Travel')
+    width: 64
+    anchors.right: prev.left
+    anchors.bottom: parent.bottom
+    @onClick: modules.client_travel.confirmTravel()
+    margin-right: 12
+  
+  
+
+

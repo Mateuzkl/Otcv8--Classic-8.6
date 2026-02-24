@@ -1,0 +1,9 @@
+Module
+  name: client_travel
+  description: Travel module
+  author: Emerald2630
+  website: www.tibiaotcv8.com
+  sandboxed: true 
+  scripts: [ travelwindow.lua ]
+  @onLoad: init()
+  @onUnload: terminate()

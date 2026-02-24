@@ -1,0 +1,62 @@
+MainWindow
+  id: reportWindow
+  !text: tr('Send a report to the admins.')
+  size: 400 340
+
+  TabButton
+    id: bugReportTab
+    !tooltip: tr("Report a bug")
+    !text: tr('Report a bug')
+    checked: true
+    on: true
+    anchors.left: parent.left
+    anchors.right: parent.horizontalCenter
+    anchors.top: parent.top
+    margin-top: 0
+
+  TabButton
+    id: playerReportTab
+    !tooltip: tr("Report a player")
+    !text: tr('Report a player')
+    anchors.left: parent.horizontalCenter
+    anchors.right: parent.right
+    anchors.top: parent.top
+
+
+  Label
+    !text: tr('Please choose the report type and write the issue.')
+    text-wrap: true
+    text-auto-resize: true
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: bugReportTab.bottom
+    margin: 8 0
+
+
+  TextEdit
+    id: text
+    text-wrap: true
+    multiline: true
+    anchors.top: prev.bottom
+    anchors.bottom: next.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin: 8 0
+    max-length: 255
+
+  Button
+    id: buttonOk
+    !text: tr('Ok')
+    width: 64
+    anchors.right: next.left
+    anchors.bottom: parent.bottom
+    margin-right: 10
+    @onClick: self:getParent():onEnter()
+
+  Button
+    id: buttonCancel
+    !text: tr('Cancel')
+    width: 64
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: self:getParent():onEscape()

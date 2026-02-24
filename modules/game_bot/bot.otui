@@ -1,0 +1,162 @@
+NormalBotBox < CheckBox
+  @onCheckChange: modules.game_bot.toggleLoop(self:getId())
+
+BotItem < Item
+  virtual: true
+  &selectable: true
+  &editable: true
+  
+MainWindow
+  !text: tr('Bot')
+  size: 200 255
+  @onEscape: self:hide()
+
+  NormalBotBox
+    id: AntiLogout
+    !text: tr('Anti Logout')
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    !tooltip: tr('Avoid logout after idle for 15 minutes')
+    focusable: true
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  NormalBotBox
+    id: AttackTrainer
+    !text: tr('Attack Trainer')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    !tooltip: tr('Automatically attack trainer if nearby')
+    focusable: true
+    margin-top: 8
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  NormalBotBox
+    id: ManaTrain
+    !text: tr('Mana Training')
+    !tooltip: tr('Automatically cast this spell when full mana')
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    focusable: true
+    margin-top: 8
+
+  TextEdit
+    id: ManaSpellText
+    width: 97
+    !text: tr('exura')
+    !placeholder: tr('Spell words')
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: next.left
+    margin-top: 5
+    margin-right: 3
+
+  Label
+    !text: tr('MP >')
+    anchors.top: next.top
+    anchors.right: next.left
+    margin-right: 5
+
+  TextEdit
+    id: ManaTrainPercent
+    !text: tr('90')
+    width: 27
+    anchors.top: next.top
+    anchors.right: next.left
+    margin-right: 2
+
+  Label
+    id: Percent
+    !text: tr('%%')
+    anchors.top: ManaTrain.bottom
+    anchors.right: parent.right
+    margin-top: 5
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  NormalBotBox
+    id: EatFood
+    !text: tr('Eat Food')
+    !tooltip: tr('Automatically eat select food')
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    focusable: true
+    margin-top: 8
+
+  Panel
+    id: FoodPanel
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 151
+    height: 34
+    margin-top: 5
+
+    BotItem
+      anchors.top: parent.top
+      anchors.left: parent.left
+
+    BotItem
+      anchors.top: prev.top
+      anchors.left: prev.right
+      margin-left: 5
+
+    BotItem
+      anchors.top: prev.top
+      anchors.left: prev.right
+      margin-left: 5
+
+    BotItem
+      anchors.top: prev.top
+      anchors.left: prev.right
+      margin-left: 5
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  LongButton
+    id: AutoLootButton
+    !text: tr('Edit Auto Loot')
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    width: 90
+    margin-top: 8
+    @onClick: |
+          local protocolGame = g_game.getProtocolGame()
+          if protocolGame then
+              protocolGame:sendExtendedOpcode(ExtendedIds.AutoLoot, 1)
+          end
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: 5
+
+  LongButton
+    id: CloseButton
+    anchors.top: prev.bottom
+    anchors.horizontalCenter: parent.horizontalCenter
+    !text: tr('Close')
+    width: 50
+    margin-top: 8
+    @onClick: modules.game_bot.hide()

@@ -1,0 +1,9 @@
+Module
+  name: client_devtools
+  description: Window for dev options
+  author: apollos
+  website: https://github.com/edubart/otclient
+  scripts: [ devtools ]
+  sandboxed: true
+  @onLoad: init()
+  @onUnload: terminate()

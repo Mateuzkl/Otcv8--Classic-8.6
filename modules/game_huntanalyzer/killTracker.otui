@@ -1,0 +1,51 @@
+InfoLabel < Label
+
+Creature < UICreature
+  size: 32 32
+  padding: 1
+  anchors.top: parent.top
+  anchors.left:parent.left
+
+MonsterNameLabel < Label
+
+CreatureCountLabel < Label
+  font: verdana-11px-antialised
+  color: #afafaf
+  text-auto-resize: true
+
+  
+MiniWindow
+  id: killWindow
+  !text: tr('Kill Tracker')
+  color: #8F8F8F
+  height: 200
+  &save: true
+
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    margin-top: 18
+    vertical-scrollbar: miniwindowScrollBar
+    layout: verticalBox
+
+    LongButton 
+      id: resetSession
+      width: 64
+      margin-top: 5
+      !text: tr("Reset Kills")
+      &onClick: resetKilledMonsters
+
+    LongButton 
+      id: clipBoard
+      width: 32
+      !text: tr("Copy Kill Session")
+      &onClick: copyKillToClipboard  
+
+
+    InfoLabel
+      id: monsterLabel
+      !text: tr('Monsters:')
+      font: verdana-11px-antialised
+      color: #afafaf
+      width: 200
+      margin-top: 10

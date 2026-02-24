@@ -1,0 +1,1840 @@
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 20:43:21
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Exiting application..
+ERROR: unable to open file for writing '/settings/questlog.json': not found
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 20:46:12
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Minimap couldn't be loaded, file missing?
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/game_minimap/minimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setCameraPosition'
+	/modules/game_minimap/minimap.lua:188: in function </modules/game_minimap/minimap.lua:173>
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 20:46:41
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Minimap couldn't be loaded, file missing?
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/game_minimap/minimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setCameraPosition'
+	/modules/game_minimap/minimap.lua:188: in function </modules/game_minimap/minimap.lua:173>
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:05:02
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Minimap couldn't be loaded, file missing?
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: ProtocolGame parse message exception (1827 bytes, 1755 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class Position'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:248: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:233: in function </modules/game_battle/battle.lua:228>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:248: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:233: in function </modules/game_battle/battle.lua:228>
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/game_minimap/minimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setCameraPosition'
+	/modules/game_minimap/minimap.lua:188: in function </modules/game_minimap/minimap.lua:173>
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:09:23
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Minimap couldn't be loaded, file missing?
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: ProtocolGame parse message exception (3643 bytes, 3565 unread, last opcode is 0xd2 (210), prev opcode is 0xa0 (160)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: no thing at pos:95 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 118 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 119 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 120 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 121 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: could not get creature
+at:
+	[C++]: ?parseCreatureUnpass@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 122 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 122 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 123 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 124 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 125 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 127 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 128 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 129 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 129 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 129 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 128 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 127 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 126 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 126 7, stackpos:3
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 125 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 124 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 123 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 122 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: could not get creature
+at:
+	[C++]: ?parseCreatureUnpass@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 121 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 120 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 119 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 118 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:96 118 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:96 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:97 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:97 116 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:97 115 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:96 115 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 115 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 115 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 114 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 115 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 116 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: no thing at pos:94 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: invalid creature
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: no thing
+at:
+	[C++]: ?parseTileTransformThing@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 117 7, stackpos:2
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:92 117 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: invalid creature
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: no thing
+at:
+	[C++]: ?parseTileTransformThing@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: ProtocolGame parse message exception (90 bytes, 37 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:16:25
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/game_features/features.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'enableFeature'
+	/modules/game_features/features.lua:40: in function </modules/game_features/features.lua:13>
+	[C]: in function 'setClientVersion'
+	/modules/client_entergame/entergame.lua:539: in function 'doLogin'
+	/modules/client_entergame/entergame.otui:13: [@onEnter]:2: in function </modules/client_entergame/entergame.otui:13: [@onEnter]:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:376: in function 'signalcall'
+	/modules/corelib/ui/uiwindow.lua:16: in function </modules/corelib/ui/uiwindow.lua:13>
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:16:35
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/game_features/features.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'enableFeature'
+	/modules/game_features/features.lua:40: in function </modules/game_features/features.lua:13>
+	[C]: in function 'setClientVersion'
+	/modules/client_entergame/entergame.lua:539: in function 'doLogin'
+	/modules/client_entergame/entergame.otui:13: [@onEnter]:2: in function </modules/client_entergame/entergame.otui:13: [@onEnter]:1>
+	[C]: in function 'pcall'
+	/modules/corelib/util.lua:376: in function 'signalcall'
+	/modules/corelib/ui/uiwindow.lua:16: in function </modules/corelib/ui/uiwindow.lua:13>
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:17:23
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: too many things, pos=84 116 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 116 7, stackpos=20
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 118 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 118 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 118 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=84 118 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 111 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 111 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 111 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=20
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=21
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=22
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=23
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=24
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=25
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=85 117 7, stackpos=26
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: ProtocolGame parse message exception (3648 bytes, 2898 unread, last opcode is 0x4b (75), prev opcode is 0x0a (10)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: too many things, pos=78 112 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=20
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=78 112 7, stackpos=21
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=79 122 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=79 122 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=79 127 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=79 127 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=20
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=21
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=22
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=23
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=24
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=25
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 109 7, stackpos=26
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=80 112 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 111 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 111 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 111 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=11
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=12
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=13
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=14
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=15
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=16
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=17
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=18
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=19
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=20
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=21
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=22
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=23
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=24
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=25
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=26
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=27
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=28
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=29
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: too many things, pos=81 123 7, stackpos=30
+at:
+	[C++]: ?setTileDescription@ProtocolGame@@QEAAHAEBV?$shared_ptr@VInputMessage@@@std@@VPosition@@@Z
+ERROR: ProtocolGame parse message exception (7368 bytes, 5756 unread, last opcode is 0x4b (75), prev opcode is 0x42 (66)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:18:09
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: ProtocolGame parse message exception (3648 bytes, 3576 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class Position'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:248: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:233: in function </modules/game_battle/battle.lua:228>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'getSpectatorsInRangeEx'
+	/modules/game_battle/battle.lua:248: in function 'checkCreatures'
+	/modules/game_battle/battle.lua:233: in function </modules/game_battle/battle.lua:228>
+ERROR: server said that a creature is known, but it's not
+stack traceback:
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: no thing at pos:92 117 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 117 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 118 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 119 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:93 120 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 120 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 120 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 121 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: could not get creature
+stack traceback:
+at:
+	[C++]: ?parseCreatureUnpass@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 122 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 123 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 124 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 125 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 126 7, stackpos:3
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 127 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 128 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:96 128 7, stackpos:3
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:96 129 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 129 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 128 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 127 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:95 126 7, stackpos:3
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: no thing at pos:95 125 7, stackpos:2
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 125 7, stackpos:1
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: no thing at pos:94 124 7, stackpos:3
+stack traceback:
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QEAA?AV?$shared_ptr@VThing@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+stack traceback:
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AEAAXAEBV?$shared_ptr@VInputMessage@@@std@@@Z
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:20:32
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: protected lua call failed: /modules/game_inventory/inventory.lua:368: attempt to call method 'getAbilityTier' (a nil value)
+stack traceback:
+	[C]: in function 'getAbilityTier'
+	/modules/game_inventory/inventory.lua:368: in function </modules/game_inventory/inventory.lua:349>
+ERROR: protected lua call failed: /modules/game_inventory/inventory.lua:368: attempt to call method 'getAbilityTier' (a nil value)
+stack traceback:
+	[C]: in function 'getAbilityTier'
+	/modules/game_inventory/inventory.lua:368: in function </modules/game_inventory/inventory.lua:349>
+ERROR: ProtocolGame parse message exception (2455 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:22:23
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+FATAL ERROR: Unable to load module 'game_inventory': LUA ERROR: /modules/game_inventory/inventory.lua:346: unexpected symbol near '}'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:22:42
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+FATAL ERROR: Unable to load module 'game_inventory': LUA ERROR: /modules/game_inventory/inventory.lua:346: unexpected symbol near '}'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:23:30
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: ProtocolGame parse message exception (2082 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: ProtocolGame parse message exception (61 bytes, 5 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:36:57
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/gamelib/ui/uiminimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setZoom'
+	/modules/gamelib/ui/uiminimap.lua:76: in function 'load'
+	/modules/client_travel/travelwindow.lua:254: in function 'loadMap'
+	/modules/client_travel/travelwindow.lua:35: in function 'init'
+	/modules/client_travel/client_travel.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:39:31
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/gamelib/ui/uiminimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setZoom'
+	/modules/gamelib/ui/uiminimap.lua:76: in function 'load'
+	/modules/client_travel/travelwindow.lua:253: in function 'loadMap'
+	/modules/client_travel/travelwindow.lua:35: in function 'init'
+	/modules/client_travel/client_travel.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:41:30
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/gamelib/ui/uiminimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setZoom'
+	/modules/gamelib/ui/uiminimap.lua:79: in function 'load'
+	/modules/client_travel/travelwindow.lua:253: in function 'loadMap'
+	/modules/client_travel/travelwindow.lua:35: in function 'init'
+	/modules/client_travel/client_travel.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:42:33
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/gamelib/ui/uiminimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setZoom'
+	/modules/gamelib/ui/uiminimap.lua:79: in function 'load'
+	/modules/client_travel/travelwindow.lua:253: in function 'loadMap'
+	/modules/client_travel/travelwindow.lua:35: in function 'init'
+	/modules/client_travel/client_travel.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:55:53
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+FATAL ERROR: Critical lua error!
+C++ call failed:
+@/modules/gamelib/ui/uiminimap.lua|fatal error
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'setZoom'
+	/modules/gamelib/ui/uiminimap.lua:79: in function </modules/gamelib/ui/uiminimap.lua:79>
+	[C]: in function 'pcall'
+	/modules/gamelib/ui/uiminimap.lua:79: in function 'load'
+	/modules/client_travel/travelwindow.lua:253: in function 'loadMap'
+	/modules/client_travel/travelwindow.lua:35: in function 'init'
+	/modules/client_travel/client_travel.otmod:8:[@onLoad]:1: in main chunk
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:80: in function 'loadModules'
+	/init.lua:101: in main chunk
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:56:20
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Minimap couldn't be loaded, file missing?
+ERROR: Unable to send extended opcode 201, extended opcodes are not enabled on this server.
+ERROR: ProtocolGame parse message exception (2112 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: protected lua call failed: /modules/game_store/store.lua:387: attempt to index a nil value
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_store/store.lua:387: in function 'hideHistory'
+	/modules/game_store/store.lua:528: in function 'show'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2403 bytes, 2331 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2403 bytes, 2331 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+stack traceback:
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 22:57:58
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2171 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2403 bytes, 2331 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: protected lua call failed: /modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: attempt to index field 'game_store' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 23:14:04
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2171 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2403 bytes, 2331 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 23:25:59
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2171 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2403 bytes, 2331 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: server said that a creature is known, but it's not
+at:
+	[C++]: ?getCreature@ProtocolGame@@QEAA?AV?$shared_ptr@VCreature@@@std@@AEBV?$shared_ptr@VInputMessage@@@3@H@Z
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 23:27:49
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2171 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 23:29:07
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2171 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: protected lua call failed: /modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: attempt to index field 'game_shop' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+Exiting application..
+WARNING: attempt to destroy widget 'hotkeysWindow' two times
+WARNING: attempt to destroy widget 'widget18' two times
+WARNING: widget 'widget522' was not explicitly destroyed
+GPU ANGLE (Intel, Intel(R) UHD Graphics Direct3D11 vs_5_0 ps_5_0, D3D11-27.20.100.9664) (Google Inc. (Intel))
+OpenGL OpenGL ES 3.0.0 (ANGLE 2.1.5414 git hash: aa63ea230e0c)
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/Mateus/Desktop/otc/Otc Classic/'
+== application started at Feb 23 2026 23:30:04
+Tibia Otcv8 3.1 rev 0 (dev) made by otclient.net built on Feb 23 2026 for arch x64
+Minimap couldn't be loaded, file missing?
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (2614 bytes, 78 unread, last opcode is 0xd8 (216), prev opcode is 0xa0 (160)): unhandled opcode 216
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 860)
+ERROR: protected lua call failed: /modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: attempt to index field 'game_shop' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:2: in function </modules/game_sidebuttons/sidebuttons.otui:73: [@onClick]:1>
+ERROR: lua function callback failed: C++ call failed: LUA ERROR: attempt to cast a 'nil' lua value to 'class std::map<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct std::less<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > >,class std::allocator<struct std::pair<class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const ,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > > > >'
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>
+stack traceback:
+	[builtin#142]: at 0x7ff693a20dd0
+	[C]: in function 'post'
+	/modules/client_stats/stats.lua:162: in function 'sendStats'
+	/modules/client_stats/stats.lua:172: in function </modules/client_stats/stats.lua:168>

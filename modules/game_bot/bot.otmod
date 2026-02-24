@@ -1,0 +1,10 @@
+Module
+  name: game_bot
+  description: Basic bot module
+  author: Apollos
+  website: www.tibiaotcv8.com
+  sandboxed: true 
+  scripts: [ bot.lua ]
+  autoload: true
+  @onLoad: init()
+  @onUnload: terminate()

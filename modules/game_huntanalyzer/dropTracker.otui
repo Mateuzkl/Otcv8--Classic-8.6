@@ -1,0 +1,86 @@
+InfoLabel < Label
+
+ItemNameLabel < Label
+
+LootLabel < Label
+  font: verdana-11px-antialised
+  color: #afafaf
+  text: None
+  width: 150
+
+ItemSprite < Item
+  size: 32 32
+  padding: 1
+  anchors.top: parent.top
+  anchors.left: parent.left
+  margin-top: 10
+  phantom: true
+  virtual: true
+  
+
+LootItemPanel < Panel
+  height: 50
+  anchors.top: parent.top
+  anchors.left: parent.left
+  anchors.right: parent.right
+
+  ItemSprite
+    id: itemSprite
+
+  ItemNameLabel
+    id: itemLabel
+    margin-left: 5
+    anchors.left: itemSprite.right
+    anchors.top: itemSprite.top
+
+  LootLabel
+    id: lootLabel
+    margin-left: 5
+    anchors.bottom: itemSprite.bottom
+    anchors.left: itemSprite.right
+    
+
+MiniWindow
+  id:dropTrackerWindow
+  !text: tr('Loot tracker')
+  color: #8F8F8F
+  height: 200
+  &save: true
+  &autoOpen: false
+  
+  MiniWindowContents
+    padding-left: 2
+    padding-right: 2
+    margin-top: 18
+    vertical-scrollbar: miniwindowScrollBar
+    layout: verticalBox
+
+    LongButton 
+      id: resetSession
+      width: 84
+      margin-top: 5
+      !text: tr("Reset Loot")
+      &onClick: resetLootedItems
+    LongButton 
+      id: clipBoard
+      width: 32
+      !text: tr("Copy Loot Session")
+      &onClick: copyLootToClipboard  
+  
+
+    InfoLabel
+      id: lootedItemsLabel
+      !text: tr('Loot Drops:')
+      font: verdana-11px-antialised
+      color: #afafaf
+      margin-top: 10
+
+
+
+
+    
+
+
+
+    
+  

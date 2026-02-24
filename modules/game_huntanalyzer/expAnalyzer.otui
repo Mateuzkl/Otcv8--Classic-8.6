@@ -1,0 +1,79 @@
+SkillFirstWidget < UIWidget
+
+exphButton < UIButton
+  height: 21
+  margin-bottom: 2
+  &onClick: onexphButtonClick
+
+SkillNameLabel < GameLabel
+  font: verdana-11px-antialised
+  color: #AFAFAF
+  anchors.left: parent.left
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+
+SkillValueLabel < GameLabel
+  id: value
+  font: verdana-11px-antialised
+  color: #AFAFAF
+  text-align: topright
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: parent.bottom
+  anchors.left: prev.left
+
+MiniWindow
+  id: exphWindow
+  !text: tr('Exp Tracker')
+  color: #8F8F8F
+  icon: /images/topbuttons/analyzers
+  &save: true
+  &autoOpen: false
+
+  MiniWindowContents
+    padding-left: 5
+    padding-right: 5
+    margin-top: 18
+    layout: verticalBox
+
+    LongButton
+      width: 84
+      margin-top: 5
+      !text: tr("Reset Exp")
+      &onClick: resetExpH
+
+    exphButton
+      margin-top: 10
+      id: session
+      height: 20
+      SkillNameLabel
+        !text: tr('Time Elapsed:')
+      SkillValueLabel
+
+    exphButton
+      id: expph
+      height: 20
+      SkillNameLabel
+        !text: tr('Exp/h:')
+      SkillValueLabel
+
+    exphButton
+      id: expgained
+      height: 20
+      SkillNameLabel
+        !text: tr('Exp Gained:')
+      SkillValueLabel
+
+    exphButton
+      id: exptolevel
+      height: 20
+      SkillNameLabel
+        !text: tr('Remaining Exp:')
+      SkillValueLabel
+
+    exphButton
+      id: timetolevel
+      height: 20
+      SkillNameLabel
+        !text: tr('Next lvl in:')
+      SkillValueLabel

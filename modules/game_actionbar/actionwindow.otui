@@ -1,0 +1,36 @@
+MainWindow
+  id: assignActionWindow
+  size: 275 150
+  text: Assign action
+
+  ComboBox
+    id: action
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-left: 10
+    text-offset: 6 0
+    enabled: true
+
+  HorizontalSeparator
+    anchors.top: prev.bottom
+    margin-top: 10
+    anchors.left: parent.left
+    anchors.right: parent.right
+
+  Button
+    id: buttonClose
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 43 20
+    font: cipsoftFont
+    text: Close
+
+  Button
+    id: buttonOk
+    anchors.right: prev.left
+    margin-right: 5
+    anchors.bottom: parent.bottom
+    size: 43 20
+    font: cipsoftFont
+    text: Ok

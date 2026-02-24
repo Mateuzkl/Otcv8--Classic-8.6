@@ -1,0 +1,9 @@
+OptionPanel
+  Panel
+    id: emoticonDescription
+    height: 354
+    text-align: left
+    text-wrap: true
+    
+  HorizontalSeparator
+    margin-top: 5

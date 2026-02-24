@@ -1,0 +1,124 @@
+LootViewRow < Panel
+  height: 48
+  image-source: /images/ui/panel_content
+  focusable: true
+  image-color: #99999999
+
+  HeadlessWindow
+    id: imgContainer
+    draggable: false
+    image-source: /images/ui/panel_lightflat
+    image-color: #FFFFFF99
+    anchors.left: parent.left
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    width: 48
+    margin-bottom: 1
+
+  Panel
+    id: labels
+    anchors.right: parent.right
+    anchors.top: parent.top
+    anchors.bottom: parent.bottom
+    anchors.left: imgContainer.right
+    margin-top: 2
+    margin-left: 8
+    layout:
+      type: verticalBox
+    Label
+      id: name
+      text-align: left
+      font: verdana-11px-rounded
+      text: Name:
+      Label
+        id: val
+        text-align: right
+        font: verdana-11px-rounded
+        text: Dragon Scale Mail
+        width: 178
+    Label
+      id: chance
+      text-align: left
+      font: verdana-11px-rounded
+      text: Chance:
+      Label
+        id: val
+        text-align: right
+        font: verdana-11px-rounded
+        width: 178
+        text: 0.15%
+    Label
+      id: count
+      text-align: left
+      font: verdana-11px-rounded
+      text: Countmax:
+      Label
+        id: val
+        text-align: right
+        font: verdana-11px-rounded
+        width: 178
+        text: 1
+  HorizontalSeparator
+    image-color: #FFFFFF99
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+
+LootRowItem < LootViewRow
+  UIItem
+    id: item
+    anchors.centerIn: imgContainer
+    virtual: true
+    size: 32 32
+
+ScrollableList < Panel
+  anchors.left: parent.left
+  anchors.right: parent.right
+  anchors.top: parent.top
+  anchors.bottom: sep.top
+  margin-bottom: 5
+  font: verdana-11px-rounded
+  TextList
+    id: textList
+    image-source: /images/ui/panel_content
+    image-color: #99999999
+    vertical-scrollbar: scrollbar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.bottom: parent.bottom
+    anchors.right: scrollbar.left
+
+  VerticalScrollBar
+    id: scrollbar
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    step: 48
+    pixel-scroll: true
+
+MainWindow
+  id: lootWindow
+  !text: tr('nil - loot statistics')
+  size: 285 513
+  font: verdana-11px-rounded
+  draggable: true
+  @onEscape: modules.game_lootsimulator.toggleLootWindow()
+  ScrollableList
+    id: items
+
+  HorizontalSeparator
+    id: sep
+    anchors.right: parent.right
+    anchors.left: parent.left
+    anchors.bottom: cancelButton.top
+    margin-top: 4
+    margin-bottom: 8
+
+  Button
+    id: cancelButton
+    !text: tr('Close')
+    font: verdana-11px-rounded
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    size: 50 25
+    @onClick: modules.game_lootsimulator.toggleLootWindow()
