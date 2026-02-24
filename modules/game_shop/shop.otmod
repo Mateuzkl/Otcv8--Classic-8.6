@@ -6,5 +6,7 @@ Module
   sandboxed: true
   scripts: [ shop ]
   dependencies: [ client_topmenu ]
+  autoload: true
+  autoload-priority: 1000
   @onLoad: init()
   @onUnload: terminate()

@@ -1,5 +1,8 @@
+-- @docconsts @{
+
 FloorHigher = 0
 FloorLower = 15
+
 SkullNone = 0
 SkullYellow = 1
 SkullGreen = 2
@@ -7,6 +10,7 @@ SkullWhite = 3
 SkullRed = 4
 SkullBlack = 5
 SkullOrange = 6
+
 ShieldNone = 0
 ShieldWhiteYellow = 1
 ShieldWhiteBlue = 2
@@ -19,39 +23,44 @@ ShieldYellowNoSharedExpBlink = 8
 ShieldBlueNoSharedExp = 9
 ShieldYellowNoSharedExp = 10
 ShieldGray = 11
+
 EmblemNone = 0
 EmblemGreen = 1
 EmblemRed = 2
 EmblemBlue = 3
 EmblemMember = 4
 EmblemOther = 5
+
 VipIconFirst = 0
 VipIconLast = 10
+
 Directions = {
-	South = 2,
-	East = 1,
-	North = 0,
-	NorthWest = 7,
-	SouthWest = 6,
-	SouthEast = 5,
-	NorthEast = 4,
-	West = 3
+  North = 0,
+  East = 1,
+  South = 2,
+  West = 3,
+  NorthEast = 4,
+  SouthEast = 5,
+  SouthWest = 6,
+  NorthWest = 7
 }
+
 Skill = {
-	LifeLeechChance = 9,
-	CriticalDamage = 8,
-	CriticalChance = 7,
-	Fishing = 6,
-	Shielding = 5,
-	Distance = 4,
-	Axe = 3,
-	Sword = 2,
-	Club = 1,
-	Fist = 0,
-	ManaLeechAmount = 12,
-	ManaLeechChance = 11,
-	LifeLeechAmount = 10
+  Fist = 0,
+  Club = 1,
+  Sword = 2,
+  Axe = 3,
+  Distance = 4,
+  Shielding = 5,
+  Fishing = 6,
+  CriticalChance = 7,
+  CriticalDamage = 8,
+  LifeLeechChance = 9,
+  LifeLeechAmount = 10,
+  ManaLeechChance = 11,
+  ManaLeechAmount = 12
 }
+
 North = Directions.North
 East = Directions.East
 South = Directions.South
@@ -60,15 +69,30 @@ NorthEast = Directions.NorthEast
 SouthEast = Directions.SouthEast
 SouthWest = Directions.SouthWest
 NorthWest = Directions.NorthWest
+
+DirectionString = {
+  [North] = "North",
+  [East] = "East",
+  [South] = "South",
+  [West] = "West",
+  [NorthEast] = "North East",
+  [SouthEast] = "South East",
+  [SouthWest] = "South West",
+  [NorthWest] = "North West"
+}
+
 FightOffensive = 1
 FightBalanced = 2
 FightDefensive = 3
+
 DontChase = 0
 ChaseOpponent = 1
+
 PVPWhiteDove = 0
 PVPWhiteHand = 1
 PVPYellowHand = 2
 PVPRedFist = 3
+
 GameProtocolChecksum = 1
 GameAccountNames = 2
 GameChallengeOnLogin = 3
@@ -109,6 +133,7 @@ GameDoubleShopSellAmount = 39
 GameContainerPagination = 40
 GameThingMarks = 41
 GameLooktypeU16 = 42
+GamePlayerStamina = 43
 GamePlayerAddons = 44
 GameMessageStatements = 45
 GameMessageLevel = 46
@@ -145,24 +170,29 @@ GameAdditionalSkills = 76
 GameDistanceEffectU16 = 77
 GamePrey = 78
 GameDoubleMagicLevel = 79
+
 GameExtendedOpcode = 80
 GameMinimapLimitedToSingleFloor = 81
 GameSendWorldName = 82
+
 GameDoubleLevel = 83
 GameDoubleSoul = 84
 GameDoublePlayerGoodsMoney = 85
-GameCreatureWalkthrough = 86
+GameCreatureWalkthrough = 86 -- add Walkthrough for versions less than 854, unpass = msg->getU8(); in protocolgameparse.cpp
 GameDoubleTradeMoney = 87
 GameSequencedPackets = 88
 GameTibia12Protocol = 89
+
 GameNewWalking = 90
 GameSlowerManualWalking = 91
 GameItemTooltip = 93
+
 GameBot = 95
 GameBiggerMapCache = 96
 GameForceLight = 97
 GameNoDebug = 98
 GameBotProtection = 99
+
 GameCreatureDirectionPassable = 100
 GameFasterAnimations = 101
 GameCenteredOutfits = 102
@@ -173,93 +203,102 @@ GameOutfitShaders = 106
 GameForceAllowItemHotkeys = 107
 GameCountU16 = 108
 GameDrawAuraOnTop = 109
+
 GamePacketSizeU32 = 110
 GamePacketCompression = 111
+
 GameOldInformationBar = 112
 GameHealthInfoBackground = 113
 GameWingOffset = 114
-GameAuraFrontAndBack = 115
-GameMapDrawGroundFirst = 116
+GameAuraFrontAndBack = 115 -- To use that: First layer is bottom/back, second (blend layer) is top/front
+
+GameMapDrawGroundFirst = 116 -- useful for big auras & wings
 GameMapIgnoreCorpseCorrection = 117
-GameDontCacheFiles = 118
-GameBigAurasCenter = 119
-GameNewUpdateWalk = 120
-GameNewCreatureStacking = 121
-GameCreaturesMana = 122
-GameQuickLootFlags = 123
+GameDontCacheFiles = 118 -- doesn't work with encryption and compression
+GameBigAurasCenter = 119 -- Automatic negative offset for aura bigger than 32x32
+GameNewUpdateWalk = 120 -- Walk update rate dependant on FPS
+GameNewCreatureStacking = 121 -- Ignore MAX_THINGS limit while adding to tile
+GameCreaturesMana = 122 -- get mana from server for creatures other than Player
+GameQuickLootFlags = 123 -- enables quick loot feature for all protocols
 GameDontMergeAnimatedText = 124
 GameMissionId = 125
 GameItemCustomAttributes = 126
 GameAnimatedTextCustomFont = 127
 GameDrawFloorShadow = 128
-GameItemName = 129
-GameItemAbilityTier = 130
-LastGameFeature = 131
+GameDisplayItemDuration = 129
+
+LastGameFeature = 130
+        
 TextColors = {
-	green = "#00EB00",
-	lightblue = "#5ff7f7",
-	yellow = "#ffff00",
-	blue = "#9f9dfd",
-	orange = "#f36500",
-	white = "#ffffff",
-	red = "#f55e5e"
+  red       = '#f55e5e', --'#c83200'
+  orange    = '#f36500', --'#c87832'
+  yellow    = '#ffff00', --'#e6c832'
+  green     = '#00EB00', --'#3fbe32'
+  lightblue = '#5ff7f7',
+  blue      = '#9f9dfd',
+  --blue1     = '#6e50dc',
+  --blue2     = '#3264c8',
+  --blue3     = '#0096c8',
+  white     = '#ffffff', --'#bebebe'
 }
+
 MessageModes = {
-	GamemasterPrivateTo = 15,
-	GamemasterPrivateFrom = 14,
-	GamemasterChannel = 13,
-	GamemasterBroadcast = 12,
-	NpcTo = 11,
-	NpcFrom = 10,
-	Spell = 9,
-	ChannelHighlight = 8,
-	Channel = 7,
-	ChannelManagement = 6,
-	PrivateTo = 5,
-	PrivateFrom = 4,
-	Yell = 3,
-	Whisper = 2,
-	Say = 1,
-	None = 0,
-	Invalid = 255,
-	Last = 52,
-	NpcFromStartBlock = 51,
-	GameHighlight = 50,
-	RVRContinue = 49,
-	RVRAnswer = 48,
-	RVRChannel = 47,
-	Blue = 46,
-	Red = 45,
-	MonsterSay = 44,
-	MonsterYell = 43,
-	BeyondLast = 42,
-	Mana = 41,
-	Market = 40,
-	Thankyou = 39,
-	TutorialHint = 38,
-	HotkeyUse = 37,
-	Report = 36,
-	BarkLoud = 35,
-	BarkLow = 34,
-	Party = 33,
-	PartyManagement = 32,
-	Guild = 31,
-	TradeNpc = 30,
-	Loot = 29,
-	Status = 28,
-	ExpOthers = 27,
-	HealOthers = 26,
-	DamageOthers = 25,
-	Exp = 24,
-	Heal = 23,
-	DamageReceived = 22,
-	DamageDealed = 21,
-	Look = 20,
-	Failure = 19,
-	Game = 18,
-	Warning = 17,
-	Login = 16
+  None                    = 0,
+  Say                     = 1,
+  Whisper                 = 2,
+  Yell                    = 3,
+  PrivateFrom             = 4,
+  PrivateTo               = 5,
+  ChannelManagement       = 6,
+  Channel                 = 7,
+  ChannelHighlight        = 8,
+  Spell                   = 9,
+  NpcFrom                 = 10,
+  NpcTo                   = 11,
+  GamemasterBroadcast     = 12,
+  GamemasterChannel       = 13,
+  GamemasterPrivateFrom   = 14,
+  GamemasterPrivateTo     = 15,
+  Login                   = 16,
+  Warning                 = 17,
+  Game                    = 18,
+  Failure                 = 19,
+  Look                    = 20,
+  DamageDealed            = 21,
+  DamageReceived          = 22,
+  Heal                    = 23,
+  Exp                     = 24,
+  DamageOthers            = 25,
+  HealOthers              = 26,
+  ExpOthers               = 27,
+  Status                  = 28,
+  Loot                    = 29,
+  TradeNpc                = 30,
+  Guild                   = 31,
+  PartyManagement         = 32,
+  Party                   = 33,
+  BarkLow                 = 34,
+  BarkLoud                = 35,
+  Report                  = 36,
+  HotkeyUse               = 37,
+  TutorialHint            = 38,
+  Thankyou                = 39,
+  Market                  = 40,
+  Mana                    = 41,
+  BeyondLast              = 42,
+  MonsterYell             = 43,
+  MonsterSay              = 44,
+  Red                     = 45,
+  Blue                    = 46,
+  RVRChannel              = 47,
+  RVRAnswer               = 48,
+  RVRContinue             = 49,
+  GameHighlight           = 50,
+  NpcFromStartBlock       = 51,
+  Last                    = 52,
+  Invalid                 = 255,
 }
+
 OTSERV_RSA  = "1091201329673994292788609605089955415282375029027981291234687579" ..
               "3726629149257644633073969600111060390723088861007265581882535850" ..
               "3429057592827629436413108566029093628212635953836686562675849720" ..
@@ -272,152 +311,144 @@ CIPSOFT_RSA = "1321277432058722840622950990822933849527763264961655079678763618"
               "2907336840325241747827401343576296990629870233111328210165697754" ..
               "88792221429527047321331896351555606801473202394175817"
 
-PIC_SIGNATURE = 1455807975
+-- set to the latest Tibia.pic signature to make otclient compatible with official tibia
+PIC_SIGNATURE = 0x56C5DDE7
+
 OsTypes = {
-	Windows = 2,
-	OtclientLinux = 10,
-	Flash = 3,
-	Linux = 1,
-	OtclientWindows = 11,
-	OtclientMac = 12
+  Linux = 1,
+  Windows = 2,
+  Flash = 3,
+  OtclientLinux = 10,
+  OtclientWindows = 11,
+  OtclientMac = 12,
 }
+
 PathFindResults = {
-	NoWay = 4,
-	TooFar = 3,
-	Impossible = 2,
-	Position = 1,
-	Ok = 0
+  Ok = 0,
+  Position = 1,
+  Impossible = 2,
+  TooFar = 3,
+  NoWay = 4,
 }
+
 PathFindFlags = {
-	AllowNonWalkable = 8,
-	AllowNonPathable = 4,
-	AllowCreatures = 2,
-	AllowNullTiles = 1
+  AllowNullTiles = 1,
+  AllowCreatures = 2,
+  AllowNonPathable = 4,
+  AllowNonWalkable = 8,
 }
+
 VipState = {
-	Pending = 2,
-	Online = 1,
-	Offline = 0
+  Offline = 0,
+  Online = 1,
+  Pending = 2,
 }
+
 ExtendedIds = {
-	NeedsUpdate = 7,
-	MapShader = 6,
-	Particles = 5,
-	Sound = 3,
-	Ping = 2,
-	Locale = 1,
-	Activate = 0,
-	Forge_Open = 102,
-	AutoLoot_Nearest = 105,
-	Forge_Request = 104,
-	Forge_Close = 103,
-	Game = 4,
-	AutoLoot = 101,
-	Travel = 100
+  Activate = 0,
+  Locale = 1,
+  Ping = 2,
+  Sound = 3,
+  Game = 4,
+  Particles = 5,
+  MapShader = 6,
+  NeedsUpdate = 7
 }
+
 PreviewState = {
-	Default = 0,
-	Active = 2,
-	Inactive = 1
+  Default = 0,
+  Inactive = 1,
+  Active = 2
 }
+
 Blessings = {
-	WisdomOfSolitude = 16,
-	FireOfSuns = 8,
-	EmbraceOfTibia = 4,
-	SpiritualShielding = 2,
-	Adventurer = 1,
-	SparkOfPhoenix = 32,
-	None = 0
+  None = 0,
+  Adventurer = 1,
+  SpiritualShielding = 2,
+  EmbraceOfTibia = 4,
+  FireOfSuns = 8,
+  WisdomOfSolitude = 16,
+  SparkOfPhoenix = 32
 }
+
 DeathType = {
-	Blessed = 1,
-	Regular = 0
+  Regular = 0,
+  Blessed = 1
 }
+
 ProductType = {
-	Other = 0,
-	NameChange = 1
+  Other = 0,
+  NameChange = 1
 }
+
 StoreErrorType = {
-	Information = 4,
-	TransferError = 3,
-	HistoryError = 2,
-	NetworkError = 1,
-	PurchaseError = 0,
-	NoError = -1
+  NoError = -1,
+  PurchaseError = 0,
+  NetworkError = 1,
+  HistoryError = 2,
+  TransferError = 3,
+  Information = 4
 }
+
 StoreState = {
-	New = 1,
-	Sale = 2,
-	Timed = 3,
-	None = 0
+  None = 0,
+  New = 1,
+  Sale = 2,
+  Timed = 3
 }
+
 AccountStatus = {
-	Frozen = 1,
-	Ok = 0,
-	Suspended = 2
+  Ok = 0,
+  Frozen = 1,
+  Suspended = 2,
 }
+
 SubscriptionStatus = {
-	Premium = 1,
-	Free = 0
+  Free = 0,
+  Premium = 1,
 }
+
 ChannelEvent = {
-	Invite = 2,
-	Leave = 1,
-	Join = 0,
-	Exclude = 3
+  Join = 0,
+  Leave = 1,
+  Invite = 2,
+  Exclude = 3,
 }
-RareAdjectives = {
-	rare = 2,
-	uncommon = 1,
-	mythic = 5,
-	legendary = 4,
-	epic = 3
+
+VocationsServer = {
+  None = 0,
+  Sorcerer = 1,
+  Druid = 2,
+  Paladin = 3,
+  Knight = 4,
+  MasterSorcerer = 5,
+  ElderDruid = 6,
+  RoyalPaladin = 7,
+  EliteKnight = 8
 }
-RarityFramesClip = {
-	"0 0 34 34",
-	"34 0 34 34",
-	"68 0 34 34",
-	"102 0 34 34",
-	"136 0 34 34"
+
+VocationsClient = {
+  None = 0,
+  Knight = 1,
+  Paladin = 2,
+  Sorcerer = 3,
+  Druid = 4,
+  EliteKnight = 11,
+  RoyalPaladin = 12,
+  MasterSorcerer = 13,
+  ElderDruid = 14
 }
-RarityWords = {
-	[0] = "Common",
-	"Uncommon",
-	"Rare",
-	"Epic",
-	"Legendary",
-	"Mythic"
+
+VocationClientToServer = {
+  [VocationsClient.None] = VocationsServer.None,
+  [VocationsClient.Knight] = VocationsServer.Knight,
+  [VocationsClient.Paladin] = VocationsServer.Paladin,
+  [VocationsClient.Sorcerer] = VocationsServer.Sorcerer,
+  [VocationsClient.Druid] = VocationsServer.Druid,
+  [VocationsClient.EliteKnight] = VocationsServer.EliteKnight,
+  [VocationsClient.RoyalPaladin] = VocationsServer.RoyalPaladin,
+  [VocationsClient.MasterSorcerer] = VocationsServer.MasterSorcerer,
+  [VocationsClient.ElderDruid] = VocationsServer.ElderDruid
 }
-ItemRarityFrames = {
-	[0] = {
-		source = "/images/ui/item.png",
-		rect = torect("0 0 34 34")
-	},
-	{
-		source = "/images/ui/rarity_items.png",
-		rect = torect("0 0 34 34")
-	},
-	{
-		source = "/images/ui/rarity_items.png",
-		rect = torect("34 0 34 34")
-	},
-	{
-		source = "/images/ui/rarity_items.png",
-		rect = torect("68 0 34 34")
-	},
-	{
-		source = "/images/ui/rarity_items.png",
-		rect = torect("102 0 34 34")
-	},
-	{
-		source = "/images/ui/rarity_items.png",
-		rect = torect("136 0 34 34")
-	}
-}
-ItemRarityColour = {
-	"#2BAF2B",
-	"#3A96D8",
-	"#B06BCE",
-	"#EAA823",
-	"#E0311A"
-}
+
+-- @}

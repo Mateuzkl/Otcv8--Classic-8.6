@@ -1,10 +1,8 @@
 Module
   name: game_bot
-  description: Basic bot module
-  author: Apollos
-  website: www.tibiaotcv8.com
-  sandboxed: true 
-  scripts: [ bot.lua ]
-  autoload: true
+  description: Advanced OTClientV8 Bot
+  author: otclient@otclient.ovh
+  sandboxed: true
+  scripts: [ bot ]
   @onLoad: init()
   @onUnload: terminate()

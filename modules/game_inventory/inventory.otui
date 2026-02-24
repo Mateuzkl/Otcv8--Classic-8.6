@@ -99,164 +99,200 @@ SoulCapLabel < GameLabel
   opacity: 1.0
   margin-top: 4
   text-offset: 0 3
-  width: 36
+  width: 34
   height: 20
   icon-source: /images/game/slots/soulcap
 
 NonClosableMiniWindow
   height: 172
+  width: 170
   id: inventoryWindow
   @onClose: modules.game_inventory.onMiniWindowClose()
   &save: true
   &autoOpen: 3
 
-  NonClosableMiniWindowContents  
-    NeckSlot
+  NonClosableMiniWindowContents
+    UIButton
+      id: minimizeButton
       anchors.top: parent.top
       anchors.left: parent.left
-      margin-top: 18
-      margin-right: 5
-      margin-left: 5
+      size: 14 14
+      image-source: /images/ui/miniwindow_buttons
+      image-clip: 0 0 14 14
+      margin-top: 3
+      margin-left: 3
+      @onClick: modules.game_inventory.toggleInventoryMinimize()
 
-    LeftSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      anchors.left: prev.left
-      margin-top: 4
-
-    FingerSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      anchors.left: prev.left
-      margin-top: 4
-    
-    HeadSlot
+    Panel
+      id: inventorySlotsPanel
       anchors.top: parent.top
-      anchors.left: slot2.right
-      margin-top: 4
-      margin-left: 4
+      anchors.left: parent.left
+      width: 115
+      height: 172
 
-    BodySlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      margin-top: 4
+      NeckSlot
+        anchors.top: parent.top
+        anchors.left: parent.left
+        margin-top: 18
+        margin-right: 5
+        margin-left: 5
 
-    LegSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      margin-top: 4
+      LeftSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        anchors.left: prev.left
+        margin-top: 4
 
-    FeetSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      margin-top: 4
-    
-    BackSlot
-      anchors.top: slot2.top
-      anchors.left: slot1.right
-      margin-left: 4
+      FingerSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        anchors.left: prev.left
+        margin-top: 4
+      
+      HeadSlot
+        anchors.top: parent.top
+        anchors.left: slot2.right
+        margin-top: 4
+        margin-left: 4
 
-    RightSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      margin-top: 4
+      BodySlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        margin-top: 4
 
-    AmmoSlot
-      anchors.top: prev.bottom
-      anchors.horizontalCenter: prev.horizontalCenter
-      margin-top: 4
+      LegSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        margin-top: 4
+
+      FeetSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        margin-top: 4
+      
+      BackSlot
+        anchors.top: slot2.top
+        anchors.left: slot1.right
+        margin-left: 4
+
+      RightSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        margin-top: 4
+
+      AmmoSlot
+        anchors.top: prev.bottom
+        anchors.horizontalCenter: prev.horizontalCenter
+        margin-top: 4
+
+      PurseButton
+        anchors.left: slot3.left
+        anchors.bottom: slot3.top        
+        margin-bottom: 3
 
     SoulCapLabel
       id: capLabel
-      anchors.top: slot10.bottom
-      anchors.horizontalCenter: slot10.horizontalCenter
-      
+      anchors.top: inventorySlotsPanel.top
+      anchors.left: inventorySlotsPanel.left
+      margin-top: 126
+      margin-left: 77
+
     SoulCapLabel
       id: soulLabel
-      anchors.top: slot9.bottom
-      anchors.horizontalCenter: slot9.horizontalCenter
-
-    PurseButton
-      anchors.left: slot3.left
-      anchors.bottom: slot3.top        
-      margin-bottom: 3
+      anchors.top: inventorySlotsPanel.top
+      anchors.left: inventorySlotsPanel.left
+      margin-top: 126
+      margin-left: 5
 
     Panel
       id: conditionPanel
       image-source: /images/ui/conditionPanel
       layout:
         type: horizontalBox
+        fitChildren: false
       height: 13
+      width: 120
       padding: 2
-      anchors.top: slot8.bottom
-      anchors.left: slot6.left
-      anchors.right: slot5.right
-      margin-top: 3
-
-    FightOffensiveBox
-      id: fightOffensiveBox
-      anchors.left: slot3.right
-      anchors.top: slot3.top
-      margin-left: 8
-
-    FightBalancedBox
-      id: fightBalancedBox
-      anchors.left: prev.left
-      anchors.top: prev.bottom
-      margin-top: 1
-
-    FightDefensiveBox
-      id: fightDefensiveBox
-      anchors.left: prev.left
-      anchors.top: prev.bottom
-      margin-top: 1
-    
-    CombatBox
-      id: chaseModeBoxStand
-      image-source: /images/game/combatmodes/standmode
-      anchors.left: fightOffensiveBox.right
-      anchors.top: fightOffensiveBox.top
-      margin-left: 4
-    
-    CombatBox
-      id: chaseModeBoxChase
-      image-source: /images/game/combatmodes/chasemode
-      anchors.left: prev.left
-      anchors.top: prev.bottom
-      margin-top: 1
-  
-    SafeFightBox
-      id: safeFightBox
-      anchors.left: prev.left
-      anchors.top: prev.bottom
-      margin-top: 1
-      
-    MountButton
-      id: mountButton
-      margin-top: 44
-      anchors.left: prev.right
       anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 150
+      margin-left: 5
 
-    InventoryButton
-      !text: tr('Options')
-      anchors.top: fightDefensiveBox.bottom
-      anchors.left: fightDefensiveBox.left
-      anchors.right: safeFightBox.right
-      margin-top: 5
-      @onClick: modules.client_options.toggle()
+    Panel
+      id: inventoryControlsPanel
+      anchors.top: parent.top
+      anchors.left: inventorySlotsPanel.right
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
 
-    InventoryButton
-      !text: tr('Quests')
-      anchors.top: prev.bottom
-      anchors.left: prev.left
-      anchors.right: prev.right
-      margin-top: 3
-      @onClick: g_game.requestQuestLog()
+      FightOffensiveBox
+        id: fightOffensiveBox
+        anchors.left: parent.left
+        anchors.top: parent.top
+        margin-top: 18
+        margin-left: 8
 
-    InventoryButton
-      !text: tr('Bot')
-      anchors.top: prev.bottom
-      anchors.left: prev.left
-      anchors.right: prev.right
-      margin-top: 3
-      @onClick: modules.game_bot.toggle()
+      FightBalancedBox
+        id: fightBalancedBox
+        anchors.left: prev.left
+        anchors.top: prev.bottom
+        margin-top: 1
+
+      FightDefensiveBox
+        id: fightDefensiveBox
+        anchors.left: prev.left
+        anchors.top: prev.bottom
+        margin-top: 1
+      
+      CombatBox
+        id: chaseModeBoxStand
+        image-source: /images/game/combatmodes/standmode
+        anchors.left: fightOffensiveBox.right
+        anchors.top: fightOffensiveBox.top
+        margin-left: 4
+      
+      CombatBox
+        id: chaseModeBoxChase
+        image-source: /images/game/combatmodes/chasemode
+        anchors.left: prev.left
+        anchors.top: prev.bottom
+        margin-top: 1
+    
+      SafeFightBox
+        id: safeFightBox
+        anchors.left: chaseModeBoxChase.left
+        anchors.top: chaseModeBoxChase.bottom
+        margin-top: 1
+        
+      MountButton
+        id: mountButton
+        anchors.left: prev.left
+        anchors.top: prev.bottom
+        margin-top: 1
+
+      InventoryButton
+        id: optionsButton
+        !text: tr('Options')
+        anchors.top: prev.bottom
+        anchors.left: fightDefensiveBox.left
+        anchors.right: safeFightBox.right
+        margin-top: 5
+        @onClick: modules.client_options.toggle()
+
+      InventoryButton
+        id: questsButton
+        !text: tr('Quests')
+        anchors.top: prev.bottom
+        anchors.left: prev.left
+        anchors.right: prev.right
+        margin-top: 3
+        @onClick: g_game.requestQuestLog()
+
+      InventoryButton
+        id: botButton
+        !text: tr('Bot')
+        anchors.top: prev.bottom
+        anchors.left: prev.left
+        anchors.right: prev.right
+        margin-top: 3
+        @onClick: modules.game_bot.toggle()

@@ -19,6 +19,5 @@ Module
     dofile 'textmessages'
     dofile 'thing'
     dofile 'spells'
-    dofile 'talents'
 
     dofiles 'ui'

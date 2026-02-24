@@ -1,293 +1,799 @@
-local botWindow, player, botButton, antiLogoutButton, attackTrainerButton, manaTrainButton, eatFootButton, antiLogoutId, attackTrainerId, manaTrainId, eatFoodId = nil
-local foodItems = {}
-LAST_INVENTORY = 10
+botWindow = nil
+botButton = nil
+contentsPanel = nil
+editWindow = nil
+
+local checkEvent = nil
+
+local botStorage = {}
+local botStorageFile = nil
+local botWebSockets = {}
+local botMessages = nil
+local botTabs = nil
+local botExecutor = nil
+
+local configList = nil
+local enableButton = nil
+local executeEvent = nil
+local statusLabel = nil
+
+local configManagerUrl = "http://otclient.ovh/configs.php"
 
 function init()
-	botWindow = g_ui.displayUI("bot")
-	player = g_game.getLocalPlayer()
+  dofile("executor")
+  
+  g_ui.importStyle("ui/basic.otui")
+  g_ui.importStyle("ui/panels.otui")
+  g_ui.importStyle("ui/config.otui")
+  g_ui.importStyle("ui/icons.otui")
+  g_ui.importStyle("ui/container.otui")
+  
+  connect(g_game, { 
+    onGameStart = online, 
+    onGameEnd = offline, 
+  })
+  
+  initCallbacks()  
+  
+  botButton = modules.client_topmenu.addRightGameToggleButton('botButton', tr('Bot'), '/images/topbuttons/bot', toggle, false, 99999)
+  botButton:setOn(false)
+  botButton:hide()
 
-	botWindow:hide()
+  botWindow = g_ui.loadUI('bot', modules.game_interface.getLeftPanel())
+  botWindow:setup()
 
-	botButton = modules.client_topmenu.addLeftGameButton("botButton", tr("Bot"), "/images/topbuttons/bot", toggle)
-	antiLogoutButton = botWindow.AntiLogout
-	attackTrainerButton = botWindow.AttackTrainer
-	manaTrainButton = botWindow.ManaTrain
-	eatFootButton = botWindow.EatFood
-	foodPanel = botWindow.FoodPanel
-	foodItems = {}
-	local childId = 1
-
-	for _, child in pairs(foodPanel:getChildren()) do
-		child:setId("FoodItem" .. childId)
-
-		childId = childId + 1
-
-		table.insert(foodItems, child)
-
-		child.onItemChange = onUpdateFoodItem
-	end
-
-	botWindow.ManaSpellText.onTextChange = saveBotText
-	botWindow.ManaTrainPercent.onTextChange = saveBotText
-
-	connect(g_game, {
-		onGameStart = logIn
-	})
-
-	if g_game.isOnline() then
-		logIn()
-	end
+  contentsPanel = botWindow.contentsPanel
+  configList = contentsPanel.config
+  enableButton = contentsPanel.enableButton
+  statusLabel = contentsPanel.statusLabel
+  botMessages = contentsPanel.messages 
+  botTabs = contentsPanel.botTabs
+  botTabs:setContentWidget(contentsPanel.botPanel)  
+  
+  editWindow = g_ui.displayUI('edit')
+  editWindow:hide()
+    
+  if g_game.isOnline() then
+    clear()
+    online()
+  end
 end
 
 function terminate()
-	botWindow:destroy()
-	botButton:destroy()
-	removeEvent(antiLogoutId)
-	removeEvent(attackTrainerId)
-	removeEvent(manaTrainId)
-	removeEvent(eatFoodId)
-	disconnect(g_game, {
-		onGameStart = logIn
-	})
+  save()
+  clear()
+
+  disconnect(g_game, { 
+    onGameStart = online, 
+    onGameEnd = offline, 
+  })
+  
+  terminateCallbacks()
+  editWindow:destroy()
+
+  botWindow:destroy()
+  botButton:destroy()   
 end
 
-function disable()
-	botButton:hide()
+function clear()
+  botExecutor = nil
+  removeEvent(checkEvent)
+
+  -- optimization, callback is not used when not needed
+  g_game.enableTileThingLuaCallback(false)
+
+  botTabs:clearTabs()  
+  botTabs:setOn(false)
+  
+  botMessages:destroyChildren()
+  botMessages:updateLayout()
+  
+  for i, socket in pairs(botWebSockets) do
+    g_http.cancel(socket)
+    botWebSockets[i] = nil
+  end
+
+  for i, widget in pairs(g_ui.getRootWidget():getChildren()) do
+    if widget.botWidget then
+      widget:destroy()
+    end
+  end
+  for i, widget in pairs(modules.game_interface.gameMapPanel:getChildren()) do
+    if widget.botWidget then
+      widget:destroy()
+    end
+  end
+  for _, widget in pairs({modules.game_interface.getRightPanel(), modules.game_interface.getLeftPanel()}) do
+    for i, child in pairs(widget:getChildren()) do
+      if child.botWidget then
+        child:destroy()
+      end
+    end
+  end
+  
+  local gameMapPanel = modules.game_interface.getMapPanel()
+  if gameMapPanel then
+    gameMapPanel:unlockVisibleFloor()   
+  end
+  
+  if g_sounds then
+    g_sounds.getChannel(SoundChannels.Bot):stop()
+  end  
 end
 
-function hide()
-	botWindow:hide()
+
+function refresh()
+  if not g_game.isOnline() then return end
+  save()
+  clear()
+  
+  -- create bot dir
+  if not g_resources.directoryExists("/bot") then
+    g_resources.makeDir("/bot")
+    if not g_resources.directoryExists("/bot") then
+      return onError("Can't create bot directory in " .. g_resources.getWriteDir())
+    end
+  end
+  
+  -- get list of configs
+  createDefaultConfigs()
+  local configs = g_resources.listDirectoryFiles("/bot", false, false)  
+  
+  -- clean
+  configList.onOptionChange = nil
+  enableButton.onClick = nil
+  configList:clearOptions()  
+     
+  -- select active config based on settings
+  local settings = g_settings.getNode('bot') or {}
+  local index = g_game.getCharacterName() .. "_" .. g_game.getClientVersion()
+  if settings[index] == nil then
+    settings[index] = {
+      enabled=false,
+      config=""
+    }
+  end  
+  
+  -- init list and buttons
+  for i=1,#configs do 
+    configList:addOption(configs[i])
+  end
+  configList:setCurrentOption(settings[index].config)
+  if configList:getCurrentOption().text ~= settings[index].config then
+    settings[index].config = configList:getCurrentOption().text
+    settings[index].enabled = false
+  end
+  
+  enableButton:setOn(settings[index].enabled)
+  
+  configList.onOptionChange = function(widget)
+    settings[index].config = widget:getCurrentOption().text
+    g_settings.setNode('bot', settings)
+    g_settings.save()
+    refresh()
+  end
+  
+  enableButton.onClick = function(widget)
+    settings[index].enabled = not settings[index].enabled
+    g_settings.setNode('bot', settings)
+    g_settings.save()
+    refresh()    
+  end
+  
+  if not g_game.isOnline() or not settings[index].enabled then
+    statusLabel:setOn(true)
+    statusLabel:setText("Status: disabled\nPress off button to enable")
+    return
+  end
+  
+  local configName = settings[index].config
+
+  -- storage
+  botStorage = {}
+  
+  local path = "/bot/" .. configName .. "/storage/"
+  if not g_resources.directoryExists(path) then
+    g_resources.makeDir(path)
+  end
+
+  botStorageFile = path.."profile_" .. g_settings.getNumber('profile') .. ".json"
+  if g_resources.fileExists(botStorageFile) then
+    local status, result = pcall(function() 
+      return json.decode(g_resources.readFileContents(botStorageFile)) 
+    end)
+    if not status then
+      return onError("Error while reading storage (" .. botStorageFile .. "). To fix this problem you can delete storage.json. Details: " .. result)
+    end
+    botStorage = result
+  end
+
+  -- run script
+  local status, result = pcall(function() 
+    return executeBot(configName, botStorage, botTabs, message, save, refresh, botWebSockets) end
+  )
+  if not status then
+    return onError(result)
+  end
+  
+  statusLabel:setOn(false)
+  botExecutor = result
+  check()
 end
 
-function show()
-	botWindow:show()
-	botWindow:raise()
-	botWindow:focus()
+function save()
+  if not botExecutor then
+    return
+  end
+  
+  local settings = g_settings.getNode('bot') or {}
+  local index = g_game.getCharacterName() .. "_" .. g_game.getClientVersion()
+  if settings[index] == nil then
+    return
+  end
+  
+  local status, result = pcall(function() 
+    return json.encode(botStorage, 2) 
+  end)
+  if not status then
+    return onError("Error while saving bot storage. Storage won't be saved. Details: " .. result)
+  end
+  
+  if result:len() > 100 * 1024 * 1024 then
+    return onError("Storage file is too big, above 100MB, it won't be saved")
+  end
+  
+  g_resources.writeFileContents(botStorageFile, result)
+end
+
+function onMiniWindowClose()
+  botButton:setOn(false)
 end
 
 function toggle()
-	if botWindow:isVisible() then
-		hide()
-	else
-		show()
-	end
+  if botButton:isOn() then
+    botWindow:close()
+    botButton:setOn(false)
+  else
+    botWindow:open()
+    botButton:setOn(true)
+  end
 end
 
-function saveBotText()
-	g_settings.set(player:getName() .. " " .. botWindow:getFocusedChild():getId(), botWindow:getFocusedChild():getText())
+function online()
+  botButton:show()
+  if not modules.client_profiles.ChangedProfile then
+    scheduleEvent(refresh, 20)
+  end
 end
 
-function logIn()
-	player = g_game.getLocalPlayer()
-
-	for _, foodItemWidget in pairs(foodItems) do
-		local storedText = g_settings.get(player:getName() .. " " .. foodItemWidget:getId())
-
-		if storedText then
-			foodItemWidget:setItemId(tonumber(storedText))
-		end
-	end
-
-	local checkButtons = {
-		antiLogoutButton,
-		attackTrainerButton,
-		manaTrainButton,
-		eatFootButton
-	}
-
-	for _, checkButton in ipairs(checkButtons) do
-		checkButton:setChecked(g_settings.getBoolean(player:getName() .. " " .. checkButton:getId()))
-	end
-
-	local textBoxes = {
-		botWindow.ManaSpellText,
-		botWindow.ManaTrainPercent
-	}
-
-	for _, textBox in ipairs(textBoxes) do
-		local storedText = g_settings.get(player:getName() .. " " .. textBox:getId())
-
-		if string.len(storedText) >= 1 then
-			textBox:setText(storedText)
-		end
-	end
+function offline()
+  save()
+  clear()
+  botButton:hide()
+  editWindow:hide()
 end
 
-function toggleLoop(key)
-	local bts = {
-		AntiLogout = {
-			antiLogoutLoop,
-			antiLogoutId
-		},
-		AttackTrainer = {
-			attackTrainerLoop,
-			attackTrainerId
-		},
-		ManaTrain = {
-			manaTrainLoop,
-			manaTrainId
-		},
-		EatFood = {
-			eatFoodLoop,
-			eatFoodId
-		}
-	}
-	local btn = botWindow:getChildById(key)
-	local bt = bts[btn:getId()]
-
-	if btn:isChecked() then
-		g_settings.set(player:getName() .. " " .. btn:getId(), true)
-
-		if bt then
-			bt[1]()
-		end
-	else
-		g_settings.set(player:getName() .. " " .. btn:getId(), false)
-
-		if bt then
-			removeEvent(bt[2])
-		end
-	end
+function onError(message)
+  statusLabel:setOn(true)
+  statusLabel:setText("Error:\n" .. message)
+  g_logger.error("[BOT] " .. message)
 end
 
-function antiLogoutLoop()
-	if not player then
-		antiLogoutId = scheduleEvent(antiLogoutLoop, 1000)
-
-		return
-	end
-
-	local dir = player:getDirection()
-
-	g_game.turn((dir + 1) % 4)
-	g_game.turn(dir)
-
-	antiLogoutId = scheduleEvent(antiLogoutLoop, 840000)
+function edit()
+  local configs = g_resources.listDirectoryFiles("/bot", false, false)  
+  editWindow.manager.upload.config:clearOptions()  
+  for i=1,#configs do 
+    editWindow.manager.upload.config:addOption(configs[i])
+  end
+  editWindow.manager.download.config:setText("")
+  
+  editWindow:show()
+  editWindow:focus()
+  editWindow:raise()
 end
 
-local function getDistanceBetween(p1, p2)
-	return math.max(math.abs(p1.x - p2.x), math.abs(p1.y - p2.y))
+function createDefaultConfigs()
+  local defaultConfigFiles = g_resources.listDirectoryFiles("default_configs", false, false)
+  for i, config_name in ipairs(defaultConfigFiles) do
+    if not g_resources.directoryExists("/bot/" .. config_name) then
+      g_resources.makeDir("/bot/" .. config_name)
+      if not g_resources.directoryExists("/bot/" .. config_name) then
+        return onError("Can't create /bot/" .. config_name .. " directory in " .. g_resources.getWriteDir())
+      end
+
+      local defaultConfigFiles = g_resources.listDirectoryFiles("default_configs/" .. config_name, true, false)
+      for i, file in ipairs(defaultConfigFiles) do
+        local baseName = file:split("/")
+        baseName = baseName[#baseName]
+        if g_resources.directoryExists(file) then
+          g_resources.makeDir("/bot/" .. config_name .. "/" .. baseName)
+          if not g_resources.directoryExists("/bot/" .. config_name .. "/" .. baseName) then
+            return onError("Can't create /bot/" .. config_name  .. "/" .. baseName .. " directory in " .. g_resources.getWriteDir())
+          end
+          local defaultConfigFiles2 = g_resources.listDirectoryFiles("default_configs/" .. config_name .. "/" .. baseName, true, false)
+          for i, file in ipairs(defaultConfigFiles2) do
+            local baseName2 = file:split("/")
+            baseName2 = baseName2[#baseName2]
+            local contents = g_resources.fileExists(file) and g_resources.readFileContents(file) or ""
+            if contents:len() > 0 then
+              g_resources.writeFileContents("/bot/" .. config_name .. "/" .. baseName .. "/" .. baseName2, contents)
+            end  
+          end
+        else
+          local contents = g_resources.fileExists(file) and g_resources.readFileContents(file) or ""
+          if contents:len() > 0 then
+            g_resources.writeFileContents("/bot/" .. config_name .. "/" .. baseName, contents)
+          end
+        end
+      end
+    end
+  end
 end
 
-function Player:canAttack()
-	return not self:hasState(16384) and not g_game.isAttacking()
+function uploadConfig()
+  local config = editWindow.manager.upload.config:getCurrentOption().text
+  local archive = compressConfig(config)
+  if not archive then
+      return displayErrorBox(tr("Config upload failed"), tr("Config %s is invalid (can't be compressed)", config))
+  end
+  if archive:len() > 1024 * 1024 then
+      return displayErrorBox(tr("Config upload failed"), tr("Config %s is too big, maximum size is 1024KB. Now it has %s KB.", config, math.floor(archive:len() / 1024)))
+  end
+  
+  local infoBox = displayInfoBox(tr("Uploading config"), tr("Uploading config %s. Please wait.", config))
+  
+  HTTP.postJSON(configManagerUrl .. "?config=" .. config:gsub("%s+", "_"), archive, function(data, err)
+    if infoBox then
+      infoBox:destroy()
+    end
+    if err or data["error"] then      
+      return displayErrorBox(tr("Config upload failed"), tr("Error while upload config %s:\n%s", config, err or data["error"]))
+    end
+    displayInfoBox(tr("Succesful config upload"), tr("Config %s has been uploaded.\n%s", config, data["message"]))
+  end)  
 end
 
-function attackTrainerLoop()
-	if not player then
-		attackTrainerId = scheduleEvent(attackTrainerLoop, 1000)
-
-		return
-	end
-
-	if player:canAttack() then
-		local pPos = player:getPosition()
-
-		if pPos then
-			local trainers = {}
-
-			for _, spec in pairs(g_map.getSpectators(pPos, false)) do
-				if table.contains({
-					"Training Dummy",
-					"Target Board"
-				}, spec:getName()) then
-					trainers[#trainers + 1] = {
-						monster = spec,
-						distance = getDistanceBetween(pPos, spec:getPosition())
-					}
-				end
-			end
-
-			table.sort(trainers, function (a, b)
-				return a.distance < b.distance
-			end)
-
-			local closestTrainer = trainers[1] and trainers[1].monster or false
-
-			if closestTrainer then
-				g_game.attack(closestTrainer)
-			end
-		end
-	end
-
-	attackTrainerId = scheduleEvent(attackTrainerLoop, 1000)
+function downloadConfig()
+  local hash = editWindow.manager.download.config:getText()
+  if hash:len() == 0 then
+      return displayErrorBox(tr("Config download error"), tr("Enter correct config hash"))  
+  end
+  local infoBox = displayInfoBox(tr("Downloading config"), tr("Downloading config with hash %s. Please wait.", hash))
+  HTTP.download(configManagerUrl .. "?hash=" .. hash, hash .. ".zip", function(path, checksum, err)
+    if infoBox then
+      infoBox:destroy()
+    end
+    if err then
+      return displayErrorBox(tr("Config download error"), tr("Config with hash %s cannot be downloaded", hash))      
+    end
+    modules.client_textedit.show("", {
+      title="Enter name for downloaded config",
+      description="Config with hash " .. hash .. " has been downloaded. Enter name for new config.\nWarning: if config with same name already exist, it will be overwritten!",
+      width=500
+    }, function(configName)
+      decompressConfig(configName, "/downloads/" .. path)
+      refresh()
+      edit()
+    end)
+  end)
 end
 
-function manaTrainLoop()
-	if not player then
-		manaTrainId = scheduleEvent(manaTrainLoop, 1000)
-
-		return
-	end
-
-	local manaTrainPercentage = tonumber(botWindow.ManaTrainPercent:getText())
-	local manaSpell = botWindow.ManaSpellText:getText()
-
-	if player:getMana() >= player:getMaxMana() * manaTrainPercentage / 100 then
-		g_game.talk(manaSpell)
-	end
-
-	manaTrainId = scheduleEvent(manaTrainLoop, 1000)
+function compressConfig(configName)
+  if not g_resources.directoryExists("/bot/" .. configName) then
+    return onError("Config " .. configName .. " doesn't exist")
+  end
+  local forArchive = {}
+  for _, file in ipairs(g_resources.listDirectoryFiles("/bot/" .. configName)) do
+    local fullPath = "/bot/" .. configName .. "/" .. file
+    if g_resources.fileExists(fullPath) then -- regular file
+        forArchive[file] = g_resources.readFileContents(fullPath)
+    else -- dir
+      for __, file2 in ipairs(g_resources.listDirectoryFiles(fullPath)) do
+        local fullPath2 = fullPath .. "/" .. file2
+        if g_resources.fileExists(fullPath2) then -- regular file
+            forArchive[file .. "/" .. file2] = g_resources.readFileContents(fullPath2)
+        end
+      end
+    end
+  end
+  return g_resources.createArchive(forArchive)
 end
 
-function onUpdateFoodItem(widget)
-	local item = widget and widget:getItem()
-
-	if item then
-		item:setCount(1)
-	end
-
-	g_settings.set(player:getName() .. " " .. widget:getId(), item and item:getId() or 0)
+function decompressConfig(configName, archive)
+  if g_resources.directoryExists("/bot/" .. configName) then
+    g_resources.deleteFile("/bot/" .. configName) -- also delete dirs
+  end
+  local files = g_resources.decompressArchive(archive)
+  g_resources.makeDir("/bot/" .. configName)
+  if not g_resources.directoryExists("/bot/" .. configName) then
+    return onError("Can't create /bot/" .. configName .. " directory in " .. g_resources.getWriteDir())
+  end
+  
+  for file, contents in pairs(files) do
+    local split = file:split("/")
+    split[#split] = nil -- remove file name
+    local dirPath = "/bot/" .. configName
+    for _, s in ipairs(split) do
+      dirPath = dirPath .. "/" .. s
+      if not g_resources.directoryExists(dirPath) then
+        g_resources.makeDir(dirPath)
+        if not g_resources.directoryExists(dirPath) then
+          return onError("Can't create " .. dirPath .. " directory in " .. g_resources.getWriteDir())
+        end
+      end
+    end
+    g_resources.writeFileContents("/bot/" .. configName .. file, contents)
+  end
 end
 
-function eatFoodLoop()
-	if not player then
-		eatFoodId = scheduleEvent(eatFoodLoop, 1000)
+-- Executor
+function message(category, msg)
+  local widget = g_ui.createWidget('BotLabel', botMessages)
+  widget.added = g_clock.millis()
+  if category == 'error' then
+    widget:setText(msg)
+    widget:setColor("red")
+    g_logger.error("[BOT] " .. msg)
+  elseif category == 'warn' then
+    widget:setText(msg)        
+    widget:setColor("yellow")
+    g_logger.warning("[BOT] " .. msg)
+  elseif category == 'info' then
+    widget:setText(msg)        
+    widget:setColor("white")
+    g_logger.info("[BOT] " .. msg)
+  end
+  
+  if botMessages:getChildCount() > 5 then
+    botMessages:getFirstChild():destroy()
+  end
+end
 
-		return
-	end
+function check()
+  removeEvent(checkEvent)
+  if not botExecutor then
+    return
+  end
 
-	if player:getRegenerationTime() > 400 or not foodItems[1] then
-		eatFoodId = scheduleEvent(eatFoodLoop, 2000)
+  checkEvent = scheduleEvent(check, 10)
+  
+  local status, result = pcall(function() 
+    return botExecutor.script() 
+  end)
+  if not status then  
+    botExecutor = nil -- critical
+    return onError(result)
+  end 
+  
+  -- remove old messages
+  local widget = botMessages:getFirstChild()
+  if widget and widget.added + 5000 < g_clock.millis() then
+    widget:destroy()
+  end
+end
 
-		return
-	end
+-- Callbacks
+function initCallbacks()
+  connect(rootWidget, {
+    onKeyDown = botKeyDown,
+    onKeyUp = botKeyUp,
+    onKeyPress = botKeyPress 
+  })
 
-	local foodFound = false
+  connect(g_game, { 
+    onTalk = botOnTalk,
+    onTextMessage = botOnTextMessage,
+    onLoginAdvice = botOnLoginAdvice,
+    onUse = botOnUse,
+    onUseWith = botOnUseWith,
+    onChannelList = botChannelList,
+    onOpenChannel = botOpenChannel,
+    onCloseChannel = botCloseChannel,
+    onChannelEvent = botChannelEvent,
+    onImbuementWindow = botImbuementWindow,
+    onModalDialog = botModalDialog,
+    onAttackingCreatureChange = botAttackingCreatureChange,
+    onAddItem = botContainerAddItem,
+    onRemoveItem = botContainerRemoveItem,
+    onGameEditText = botGameEditText,
+    onSpellCooldown = botSpellCooldown,
+    onSpellGroupCooldown = botGroupSpellCooldown
+  })
+  
+  connect(Tile, {
+    onAddThing = botAddThing,
+    onRemoveThing = botRemoveThing 
+  })
 
-	for _, container in pairs(g_game.getContainers()) do
-		for __, item in ipairs(container:getItems()) do
-			for i, foodItemWidget in ipairs(foodItems) do
-				local foodItem = foodItemWidget:getItem()
+  connect(Creature, {
+    onAppear = botCreatureAppear,
+    onDisappear = botCreatureDisappear,
+    onPositionChange = botCreaturePositionChange,
+    onHealthPercentChange = botCraetureHealthPercentChange,
+    onTurn = botCreatureTurn,
+    onWalk = botCreatureWalk,
+  })
+  
+  connect(LocalPlayer, {
+    onPositionChange = botCreaturePositionChange,
+    onHealthPercentChange = botCraetureHealthPercentChange,
+    onTurn = botCreatureTurn,
+    onWalk = botCreatureWalk,
+    onManaChange = botManaChange,
+    onStatesChange = botStatesChange,
+    onInventoryChange = botInventoryChange
+  })
+  
+  connect(Container, {
+    onOpen = botContainerOpen,
+    onClose = botContainerClose,
+    onUpdateItem = botContainerUpdateItem,
+    onAddItem = botContainerAddItem,
+    onRemoveItem = botContainerRemoveItem,
+  })
+  
+  connect(g_map, { 
+    onMissle = botOnMissle,
+    onAnimatedText = botOnAnimatedText,
+    onStaticText = botOnStaticText
+  })
+end
 
-				if foodItem and item:getId() == foodItem:getId() then
-					g_game.use(item)
+function terminateCallbacks()
+  disconnect(rootWidget, {
+    onKeyDown = botKeyDown,
+    onKeyUp = botKeyUp,
+    onKeyPress = botKeyPress 
+  })
+                        
+  disconnect(g_game, { 
+    onTalk = botOnTalk,
+    onTextMessage = botOnTextMessage,
+    onLoginAdvice = botOnLoginAdvice,
+    onUse = botOnUse,
+    onUseWith = botOnUseWith,
+    onChannelList = botChannelList,
+    onOpenChannel = botOpenChannel,
+    onCloseChannel = botCloseChannel,
+    onChannelEvent = botChannelEvent,
+    onImbuementWindow = botImbuementWindow,
+    onModalDialog = botModalDialog,
+    onAttackingCreatureChange = botAttackingCreatureChange,
+    onGameEditText = botGameEditText,
+    onSpellCooldown = botSpellCooldown,
+    onSpellGroupCooldown = botGroupSpellCooldown
+  })
+  
+  disconnect(Tile, {
+    onAddThing = botAddThing,
+    onRemoveThing = botRemoveThing 
+  })
 
-					foodFound = true
+  disconnect(Creature, {
+    onAppear = botCreatureAppear,
+    onDisappear = botCreatureDisappear,
+    onPositionChange = botCreaturePositionChange,
+    onHealthPercentChange = botCraetureHealthPercentChange,
+    onTurn = botCreatureTurn,
+    onWalk = botCreatureWalk,
+  })  
+  
+  disconnect(LocalPlayer, {
+    onPositionChange = botCreaturePositionChange,
+    onHealthPercentChange = botCraetureHealthPercentChange,
+    onTurn = botCreatureTurn,
+    onWalk = botCreatureWalk,
+    onManaChange = botManaChange,
+    onStatesChange = botStatesChange,
+    onInventoryChange = botInventoryChange
+  })
+  
+  disconnect(Container, {
+    onOpen = botContainerOpen,
+    onClose = botContainerClose,
+    onUpdateItem = botContainerUpdateItem,
+    onAddItem = botContainerAddItem, 
+    onRemoveItem = botContainerRemoveItem
+  })
+  
+  disconnect(g_map, { 
+    onMissle = botOnMissle,
+    onAnimatedText = botOnAnimatedText,
+    onStaticText = botOnStaticText
+  })
+end
 
-					break
-				end
-			end
-		end
-	end
+function safeBotCall(func)
+  local status, result = pcall(func)
+  if not status then    
+    onError(result)
+  end
+end
 
-	if not foodFound then
-		for i = 1, LAST_INVENTORY do
-			local inventoryItem = player:getInventoryItem(i)
+function botKeyDown(widget, keyCode, keyboardModifiers)
+  if botExecutor == nil then return false end
+  if keyCode == KeyUnknown then return end
+  safeBotCall(function() botExecutor.callbacks.onKeyDown(keyCode, keyboardModifiers) end)
+end
 
-			if inventoryItem then
-				for _, foodItemWidget in ipairs(foodItems) do
-					local foodItem = foodItemWidget:getItem()
+function botKeyUp(widget, keyCode, keyboardModifiers)
+  if botExecutor == nil then return false end
+  if keyCode == KeyUnknown then return end
+  safeBotCall(function() botExecutor.callbacks.onKeyUp(keyCode, keyboardModifiers) end)
+end
 
-					if foodItem and inventoryItem:getId() == foodItem:getId() then
-						g_game.use(inventoryItem)
+function botKeyPress(widget, keyCode, keyboardModifiers, autoRepeatTicks)
+  if botExecutor == nil then return false end
+  if keyCode == KeyUnknown then return end
+  safeBotCall(function() botExecutor.callbacks.onKeyPress(keyCode, keyboardModifiers, autoRepeatTicks) end)
+end
 
-						break
-					end
-				end
-			end
-		end
-	end
+function botOnTalk(name, level, mode, text, channelId, pos)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onTalk(name, level, mode, text, channelId, pos) end)
+end
 
-	eatFoodId = scheduleEvent(eatFoodLoop, 2000)
+function botOnTextMessage(mode, text)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onTextMessage(mode, text) end)
+end
+
+function botOnLoginAdvice(message)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onLoginAdvice(message) end)
+end
+
+function botAddThing(tile, thing)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onAddThing(tile, thing) end)
+end
+
+function botRemoveThing(tile, thing)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onRemoveThing(tile, thing) end)
+end
+
+function botCreatureAppear(creature)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onCreatureAppear(creature) end)
+end
+
+function botCreatureDisappear(creature)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onCreatureDisappear(creature) end)
+end
+
+function botCreaturePositionChange(creature, newPos, oldPos)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onCreaturePositionChange(creature, newPos, oldPos) end)
+end
+
+function botCraetureHealthPercentChange(creature, healthPercent)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onCreatureHealthPercentChange(creature, healthPercent) end)
+end
+
+function botOnUse(pos, itemId, stackPos, subType)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onUse(pos, itemId, stackPos, subType) end)
+end
+
+function botOnUseWith(pos, itemId, target, subType)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onUseWith(pos, itemId, target, subType) end)
+end
+
+function botContainerOpen(container, previousContainer)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onContainerOpen(container, previousContainer) end)
+end
+
+function botContainerClose(container)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onContainerClose(container) end)
+end
+
+function botContainerUpdateItem(container, slot, item, oldItem)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onContainerUpdateItem(container, slot, item, oldItem) end)
+end
+
+function botOnMissle(missle)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onMissle(missle) end)
+end
+
+function botOnAnimatedText(thing, text)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onAnimatedText(thing, text) end)
+end
+
+function botOnStaticText(thing, text)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onStaticText(thing, text) end)
+end
+
+function botChannelList(channels)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onChannelList(channels) end)
+end
+
+function botOpenChannel(channelId, name)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onOpenChannel(channelId, name) end)
+end
+
+function botCloseChannel(channelId)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onCloseChannel(channelId) end)
+end
+
+function botChannelEvent(channelId, name, event)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onChannelEvent(channelId, name, event) end)
+end
+
+function botCreatureTurn(creature, direction)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onTurn(creature, direction) end)
+end
+
+function botCreatureWalk(creature, oldPos, newPos)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onWalk(creature, oldPos, newPos) end)
+end
+
+function botImbuementWindow(itemId, slots, activeSlots, imbuements, needItems)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onImbuementWindow(itemId, slots, activeSlots, imbuements, needItems) end)
+end
+
+function botModalDialog(id, title, message, buttons, enterButton, escapeButton, choices, priority)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onModalDialog(id, title, message, buttons, enterButton, escapeButton, choices, priority) end)
+end
+
+function botGameEditText(id, itemId, maxLength, text, writer, time)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onGameEditText(id, itemId, maxLength, text, writer, time) end)
+end
+
+function botAttackingCreatureChange(creature, oldCreature)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onAttackingCreatureChange(creature,oldCreature) end)
+end
+
+function botManaChange(player, mana, maxMana, oldMana, oldMaxMana)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onManaChange(player, mana, maxMana, oldMana, oldMaxMana) end)
+end
+
+function botStatesChange(player, states, oldStates)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onStatesChange(player, states, oldStates) end)
+end
+
+function botContainerAddItem(container, slot, item, oldItem)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onAddItem(container, slot, item, oldItem) end)
+end
+
+function botContainerRemoveItem(container, slot, item)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onRemoveItem(container, slot, item) end)
+end
+
+function botSpellCooldown(iconId, duration)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onSpellCooldown(iconId, duration) end)
+end
+
+function botGroupSpellCooldown(iconId, duration)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onGroupSpellCooldown(iconId, duration) end)
+end
+
+function botInventoryChange(player, slot, item, oldItem)
+  if botExecutor == nil then return false end
+  safeBotCall(function() botExecutor.callbacks.onInventoryChange(player, slot, item, oldItem) end)
 end

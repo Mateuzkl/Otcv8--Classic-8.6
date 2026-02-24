@@ -1,162 +1,130 @@
-NormalBotBox < CheckBox
-  @onCheckChange: modules.game_bot.toggleLoop(self:getId())
-
-BotItem < Item
-  virtual: true
-  &selectable: true
-  &editable: true
+BotTabBar < TabBar
+  tab-spacing: 1
+  margin-left: 1
+  margin-right: 1
+  height: 20
   
-MainWindow
+  $on:
+    visible: true
+    margin-top: 2
+
+  $!on:
+    visible: false
+    margin-top: -20
+
+BotTabBarPanel < TabBarPanel
+BotTabBarButton < TabBarButton
+  padding: 4
+  padding-right: 5
+  text-horizontal-auto-resize: true
+  $!first:
+    margin-left: 0
+
+MiniWindow
+  id: botWindow
   !text: tr('Bot')
-  size: 200 255
-  @onEscape: self:hide()
+  height: 600
+  icon: /images/topbuttons/bot
+  @onClose: modules.game_bot.onMiniWindowClose()
+  &save: true
+  &autoOpen: 10
 
-  NormalBotBox
-    id: AntiLogout
-    !text: tr('Anti Logout')
-    anchors.top: parent.top
-    anchors.left: parent.left
-    anchors.right: parent.right
-    !tooltip: tr('Avoid logout after idle for 15 minutes')
-    focusable: true
-
-  HorizontalSeparator
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 5
-
-  NormalBotBox
-    id: AttackTrainer
-    !text: tr('Attack Trainer')
-    anchors.left: parent.left
-    anchors.right: parent.right
-    anchors.top: prev.bottom
-    !tooltip: tr('Automatically attack trainer if nearby')
-    focusable: true
-    margin-top: 8
-
-  HorizontalSeparator
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 5
-
-  NormalBotBox
-    id: ManaTrain
-    !text: tr('Mana Training')
-    !tooltip: tr('Automatically cast this spell when full mana')
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    focusable: true
-    margin-top: 8
-
-  TextEdit
-    id: ManaSpellText
-    width: 97
-    !text: tr('exura')
-    !placeholder: tr('Spell words')
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: next.left
-    margin-top: 5
-    margin-right: 3
-
-  Label
-    !text: tr('MP >')
-    anchors.top: next.top
-    anchors.right: next.left
-    margin-right: 5
-
-  TextEdit
-    id: ManaTrainPercent
-    !text: tr('90')
-    width: 27
-    anchors.top: next.top
-    anchors.right: next.left
-    margin-right: 2
-
-  Label
-    id: Percent
-    !text: tr('%%')
-    anchors.top: ManaTrain.bottom
-    anchors.right: parent.right
-    margin-top: 5
-
-  HorizontalSeparator
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 5
-
-  NormalBotBox
-    id: EatFood
-    !text: tr('Eat Food')
-    !tooltip: tr('Automatically eat select food')
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    focusable: true
-    margin-top: 8
-
-  Panel
-    id: FoodPanel
-    anchors.top: prev.bottom
-    anchors.horizontalCenter: parent.horizontalCenter
-    width: 151
-    height: 34
-    margin-top: 5
-
-    BotItem
+  MiniWindowContents   
+    ComboBox
+      id: config
+      &menuScroll: true
+      &menuHeight: 450
+      &menuScrollStep: 100
+      &parentWidth: true
       anchors.top: parent.top
       anchors.left: parent.left
-
-    BotItem
+      anchors.right: parent.right
+      margin-top: 2
+      margin-left: 2
+      margin-right: 75
+      text-offset: 3 0
+      
+    Button
+      id: editConfig
       anchors.top: prev.top
       anchors.left: prev.right
-      margin-left: 5
+      anchors.right: parent.right
+      !text: tr('Edit')
+      @onClick: modules.game_bot.edit()
+      margin-left: 3
+      margin-right: 37
 
-    BotItem
+    Button
+      id: enableButton
       anchors.top: prev.top
       anchors.left: prev.right
-      margin-left: 5
+      anchors.right: parent.right
+      margin-left: 3
+      margin-right: 2
+      
+      $on:
+        text: On
+        color: #00AA00
+        
+      $!on:
+        text: Off
+        color: #FF0000
+    
+    Label
+      id: statusLabel
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      text-wrap: true
+      text-auto-resize: true
+      text-align: center
+      !text: tr('Status: waiting')
+      margin-left: 3
+      margin-right: 3
+      
+      $on:
+        margin-top: 3
+      
+      $!on:
+        text:
+        margin-top: -13
+      
+    HorizontalSeparator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 3
+      margin-left: 2
+      margin-right: 2
 
-    BotItem
-      anchors.top: prev.top
-      anchors.left: prev.right
-      margin-left: 5
+    Panel
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      id: messages
+      layout:
+        type: verticalBox
+        fit-children: true
 
-  HorizontalSeparator
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 5
-
-  LongButton
-    id: AutoLootButton
-    !text: tr('Edit Auto Loot')
-    anchors.top: prev.bottom
-    anchors.horizontalCenter: parent.horizontalCenter
-    width: 90
-    margin-top: 8
-    @onClick: |
-          local protocolGame = g_game.getProtocolGame()
-          if protocolGame then
-              protocolGame:sendExtendedOpcode(ExtendedIds.AutoLoot, 1)
-          end
-
-  HorizontalSeparator
-    anchors.top: prev.bottom
-    anchors.left: parent.left
-    anchors.right: parent.right
-    margin-top: 5
-
-  LongButton
-    id: CloseButton
-    anchors.top: prev.bottom
-    anchors.horizontalCenter: parent.horizontalCenter
-    !text: tr('Close')
-    width: 50
-    margin-top: 8
-    @onClick: modules.game_bot.hide()
+    HorizontalSeparator
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.top: prev.bottom
+      margin-top: 5
+      margin-left: 2
+      margin-right: 2
+    
+    BotTabBar
+      id: botTabs
+      anchors.top: prev.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      margin-right: -20
+      
+    Panel
+      id: botPanel
+      margin-top: 2
+      anchors.top: prev.bottom
+      anchors.bottom: parent.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right

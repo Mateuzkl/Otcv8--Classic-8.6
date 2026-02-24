@@ -562,9 +562,6 @@ function createThingMenu(menuPosition, lookThing, useThing, creatureThing)
 	end
 
 	if lookThing and not lookThing:isCreature() and not lookThing:isNotMoveable() and lookThing:isPickupable() then
-		menu:addOption(tr("Add/Remove autoloot"), function ()
-			sendAddRemoveAutolootItem(useThing)
-		end)
 		menu:addSeparator()
 		menu:addOption(tr("Trade with ..."), function ()
 			startTradeWith(lookThing)
@@ -971,19 +968,6 @@ function processMouseAction(menuPosition, mouseButton, autoWalkPos, lookThing, u
 	end
 
 	return false
-end
-
-function sendAddRemoveAutolootItem(useThing)
-	local msg = OutputMessage.create()
-
-	msg:addU8(ClientOpcodes.ClientSendAddRemoveAutoLoot)
-	msg:addU16(useThing:getId())
-	msg:addU8(0) -- No rarity/tier
-
-
-	local p = g_game.getProtocolGame()
-
-	p:send(msg)
 end
 
 function moveStackableItem(item, toPos)
