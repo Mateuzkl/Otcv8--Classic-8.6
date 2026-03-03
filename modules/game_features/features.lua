@@ -71,7 +71,6 @@ function updateFeatures(version)
             g_game.enableFeature(GameIdleAnimations)
             g_game.enableFeature(GameEnhancedAnimations)
 			g_game.enableFeature(GameExtendedClientPing)
-			g_game.enableFeature(GameChangeMapAwareRange)
             g_game.enableFeature(GameSpritesU32) -- Extended sprites
             --g_game.enableFeature(GameSpritesAlphaChannel) -- Transparency
 			 g_game.enableFeature(GameDoublePlayerGoodsMoney) 
